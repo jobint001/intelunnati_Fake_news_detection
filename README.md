@@ -14,7 +14,7 @@ git clone https://github.com/jobint001/Fake_news_detection
 You can clone the docker image using the below code
 
 ```
-docker pull ghcr.io/jobint001/fake_news_detection/fakenews_detection_jupyter:latest
+docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fakenews_detection_jupyter:latest
 
 
 ```
