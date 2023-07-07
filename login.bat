@@ -1,0 +1,1 @@
+docker login ghcr.io -u jobint001 -p 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
