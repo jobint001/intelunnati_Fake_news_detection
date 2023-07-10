@@ -43,4 +43,10 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fakenews_detection_jup
 ## Collection of data
 
 The data used is from  https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
+
 The data is read as csv file using `` panda.read_csv() ``
+
+## Data cleaning 
+
+unnecessary colum in the data is removed as they do not affect the performance of the model. Fake news is labeled as 0 and True news is labeled as 1. Tiltle, text, label is used from the initial data.
+
