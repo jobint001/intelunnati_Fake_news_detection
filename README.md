@@ -67,9 +67,13 @@ To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If
 ## Vectorization
 
 ``count_vectorizer.fit_transform(X)`` This line applies the fit_transform() method of the CountVectorizer class to the input X. It tokenizes and counts the words in the text data, generating a matrix of token counts.
+
 ``freq_term_matrix = count_vectorizer.transform(X)`` This line applies the transform() method of the CountVectorizer class to the input X. It uses the previously fitted CountVectorizer to transform the text data into a matrix of token counts.
+
 ``tfidf = TfidfTransformer(norm="l2")`` This line creates an instance of the TfidfTransformer class with the parameter norm set to "l2", indicating that the TF-IDF normalization should use the L2 norm.
+
 ``tfidf.fit(freq_term_matrix)`` This line applies the fit() method of the TfidfTransformer class to the freq_term_matrix, which is the matrix of token counts obtained from the previous step. It calculates the IDF (Inverse Document Frequency) values for each term based on the entire corpus.
+
 ``tf_idf_matrix = tfidf.fit_transform(freq_term_matrix)`` This line applies the fit_transform() method of the TfidfTransformer class to the freq_term_matrix. It transforms the matrix of token counts into a TF-IDF representation, incorporating both term frequency and inverse document frequency.
 
 ## Splitting of data
@@ -77,3 +81,4 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
 
 ``x_train`` and ``y_train`` represent the training data, which will be used to train a machine learning model.
 ``x_test`` and ``y_test`` represent the testing data, which will be used to evaluate the performance of the trained model on unseen data.
+### Model training, Evaluation, and Prediction
