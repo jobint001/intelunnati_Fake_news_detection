@@ -38,6 +38,9 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fakenews_detection_jup
 * sklearn.linear_model.LogisticRegression: A class for logistic regression models.
 * time: A module for working with time-related functions.
 * numpy: A library for numerical computing in Python.
+* TfidfTransformer: Transforms a count matrix into a TF-IDF representation.
+* CountVectorizer: Converts text documents into a matrix of token counts.
+* TfidfVectorizer: Combines CountVectorizer and TfidfTransformer to convert text documents into a matrix of TF-IDF features.
 
 
 ## Collection of data
@@ -52,14 +55,25 @@ Unnecessary colum in the data is removed as they do not affect the performance o
 
 To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If any missing values are found `` data.dropna()`` removes those rows.
 
-## Data cleaning 
-
-``  tokenize(column)``  takes a column of text data, tokenizes it into individual words, and returns a list of tokens containing only alphabetical words. It can be useful for tasks such as text preprocessing or building language models.
+``tokenize(column)``  takes a column of text data, tokenizes it into individual words, and returns a list of tokens containing only alphabetical words. It can be useful for tasks such as text preprocessing or building language models.
 
 `` remove_stopwords(tokenized_column)``  function is designed to remove stopwords from a tokenized column of text. Stopwords are common words that often do not carry significant meaning in text analysis tasks. The function takes a list of tokenized words as input and removes any words that are present in a predefined set of stopwords for the English language.
 
 ``apply_stemming(tokenized_column)`` function is designed to apply stemming to a tokenized column of words. Stemming is a process that reduces words to their base or root form. The function utilizes the PorterStemmer algorithm from the NLTK library, which is commonly used for English stemming. It takes a list of tokenized words as input, applies stemming to each word using the PorterStemmer, and returns a new list containing the stemmed versions of the words.
 
 ``rejoin_words(tokenized_column)`` rejoin a tokenized column of words back into a single string. 
+``cleaning(news)`` calls all the datacleaning functions.
 
+## Vectorization
 
+``count_vectorizer.fit_transform(X)`` This line applies the fit_transform() method of the CountVectorizer class to the input X. It tokenizes and counts the words in the text data, generating a matrix of token counts.
+``freq_term_matrix = count_vectorizer.transform(X)`` This line applies the transform() method of the CountVectorizer class to the input X. It uses the previously fitted CountVectorizer to transform the text data into a matrix of token counts.
+``tfidf = TfidfTransformer(norm="l2")`` This line creates an instance of the TfidfTransformer class with the parameter norm set to "l2", indicating that the TF-IDF normalization should use the L2 norm.
+``tfidf.fit(freq_term_matrix)`` This line applies the fit() method of the TfidfTransformer class to the freq_term_matrix, which is the matrix of token counts obtained from the previous step. It calculates the IDF (Inverse Document Frequency) values for each term based on the entire corpus.
+``tf_idf_matrix = tfidf.fit_transform(freq_term_matrix)`` This line applies the fit_transform() method of the TfidfTransformer class to the freq_term_matrix. It transforms the matrix of token counts into a TF-IDF representation, incorporating both term frequency and inverse document frequency.
+
+## Splitting of data
+The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``train_test_split`` function from scikit-learn to split the ``tf_idf_matrix (the feature matrix)`` and y (the target variable) into training and testing sets.
+
+``x_train`` and ``y_train`` represent the training data, which will be used to train a machine learning model.
+``x_test`` and ``y_test`` represent the testing data, which will be used to evaluate the performance of the trained model on unseen data.
