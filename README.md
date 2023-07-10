@@ -38,3 +38,9 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fakenews_detection_jup
 * sklearn.linear_model.LogisticRegression: A class for logistic regression models.
 * time: A module for working with time-related functions.
 * numpy: A library for numerical computing in Python.
+
+
+## Collection of data
+
+The data used is from  https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
+The data is read as csv file using `` panda.read_csv() ``
