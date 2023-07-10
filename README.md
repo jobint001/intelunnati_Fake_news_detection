@@ -48,5 +48,16 @@ The data is read as csv file using `` panda.read_csv() ``
 
 ## Data cleaning 
 
-unnecessary colum in the data is removed as they do not affect the performance of the model. Fake news is labeled as 0 and True news is labeled as 1. Tiltle, text, label is used from the initial data.
+Unnecessary colum in the data is removed as they do not affect the performance of the model. Fake news is labeled as 0 and True news is labeled as 1. Tiltle, text, label columns are used from the initial dataset.
+
+To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If any missing values are found `` data.dropna()`` removes those rows.
+
+## Data cleaning 
+
+``  tokenize(column)``  takes a column of text data, tokenizes it into individual words, and returns a list of tokens containing only alphabetical words. It can be useful for tasks such as text preprocessing or building language models.
+
+`` remove_stopwords(tokenized_column)``  function is designed to remove stopwords from a tokenized column of text. Stopwords are common words that often do not carry significant meaning in text analysis tasks. The function takes a list of tokenized words as input and removes any words that are present in a predefined set of stopwords for the English language.
+
+``apply_stemming(tokenized_column)`` function is designed to apply stemming to a tokenized column of words. Stemming is a process that reduces words to their base or root form. The function utilizes the PorterStemmer algorithm from the NLTK library, which is commonly used for English stemming. It takes a list of tokenized words as input, applies stemming to each word using the PorterStemmer, and returns a new list containing the stemmed versions of the words.
+
 
