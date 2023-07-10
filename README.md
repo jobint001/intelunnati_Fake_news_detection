@@ -82,6 +82,16 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
 ``x_train`` and ``y_train`` represent the training data, which will be used to train a machine learning model.
 ``x_test`` and ``y_test`` represent the testing data, which will be used to evaluate the performance of the trained model on unseen data.
 ## Model training, Evaluation, and Prediction
-  ## 1. Logistic Regression
+  ### 1. Logistic Regression
   It is a supervised learning algorithm used for binary classification tasks. It is used to predict the probability of an instance belonging to a particular class.
-  It can be used when the dependent variable is binary or categorical.
+  It can be used when the dependent variable is binary or categorical.Logistic Regression uses the logistic function (sigmoid function) to map the linear 
+  combination of the input features to a value between 0 and 1, representing the probability of the positive class.We first used unpatched sklearn for the model      trainning. Accuracy and time taken is calculated. Then the sklearn library is patched using ``patch_sklearn()`` which gives intel optiimisation to sklearn library
+  Now the accuracy and time taken is compared and found that the patched sklearn library trained the model faster.
+
+  Evaluations including confusion matrix and roc curve are drawn based on the predicted data from the model.
+
+  ### 2.Naive Bayes
+
+  Naive Bayes models work well when there are many features (words) and the assumption of feature independence holds reasonably well.
+  In the case of fake news detection, Naive Bayes models can effectively capture patterns in the presence or absence of specific words or features that may 
+  indicate,fake or legitimate news.
