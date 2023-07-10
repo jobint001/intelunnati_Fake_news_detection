@@ -81,4 +81,7 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
 
 ``x_train`` and ``y_train`` represent the training data, which will be used to train a machine learning model.
 ``x_test`` and ``y_test`` represent the testing data, which will be used to evaluate the performance of the trained model on unseen data.
-### Model training, Evaluation, and Prediction
+## Model training, Evaluation, and Prediction
+  ## 1. Logistic Regression
+  It is a supervised learning algorithm used for binary classification tasks. It is used to predict the probability of an instance belonging to a particular class.
+  It can be used when the dependent variable is binary or categorical.
