@@ -60,4 +60,6 @@ To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If
 
 ``apply_stemming(tokenized_column)`` function is designed to apply stemming to a tokenized column of words. Stemming is a process that reduces words to their base or root form. The function utilizes the PorterStemmer algorithm from the NLTK library, which is commonly used for English stemming. It takes a list of tokenized words as input, applies stemming to each word using the PorterStemmer, and returns a new list containing the stemmed versions of the words.
 
+``rejoin_words(tokenized_column)`` rejoin a tokenized column of words back into a single string. 
+
 
