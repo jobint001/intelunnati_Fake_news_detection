@@ -18,6 +18,7 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fakenews_detection_jup
 
 
 ```
+we started our project on 24th of may 2023. The live section on 31st gave us an insight on what we are supposed to do.
 
 # Libraries used
 
