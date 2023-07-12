@@ -12,7 +12,7 @@ RUN bash pip_env.sh
 
 
 # Copy the fakenews_detection.ipynb file
-COPY fakenews_detection.ipynb /app/fakenews_detection.ipynb
+COPY fakenews_detectionfinal.ipynb /app/fakenews_detectionfinal.ipynb
 
 EXPOSE 8888
 
