@@ -106,3 +106,7 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
   Nonlinear correlations and interactions between features can be successfully captured by decision trees. The detection of fake news frequently requires intricate patterns and dependencies between multiple words or phrases. 
 
   Decision trees can naturally handle both categorical and numerical variables without the need for explicit feature encoding. In the detection of fake news, you may come across a combination of textual, category, and numerical data.
+  
+  The training accuracy of the decision tree has come out as 99.62 percent, which is the highest compared to all other models. AUC of ROC curve is 1 which indicates a perfect or ideal performance of the classification model. 
+
+### 4.Passive-Aggressive Classifier
