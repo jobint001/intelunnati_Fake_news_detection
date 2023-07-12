@@ -91,10 +91,18 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
   combination of the input features to a value between 0 and 1, representing the probability of the positive class.We first used unpatched sklearn for the model      trainning. Accuracy and time taken is calculated. Then the sklearn library is patched using ``patch_sklearn()`` which gives intel optiimisation to sklearn library
   Now the accuracy and time taken is compared and found that the patched sklearn library trained the model faster.
 
-  Evaluations including confusion matrix and roc curve are drawn based on the predicted data from the model.
+  Evaluations including confusion matrix and ROC curve are drawn based on the predicted data from the model. AUC of ROC graph is 0.98.
 
   ### 2.Naive Bayes
 
   Naive Bayes models work well when there are many features (words) and the assumption of feature independence holds reasonably well.
   In the case of fake news detection, Naive Bayes models can effectively capture patterns in the presence or absence of specific words or features that may 
-  indicate,fake or legitimate news.
+  indicate,fake or legitimate news.With Naive Bayes model the accuracy was lower but the time for training was significantly lower. It has a higher RMSE value      which indicates it is not as good as logistic regression model. ROC graph and confusion matrix is drawn on the predicted data. The AUC of ROC graph came out to   be 0.94 which is lower when compared to 0.98 of logistic regression. 
+
+  ### 3.Decision Tree
+
+  Decision trees provide a clear and interpretable structure that can be easily visualized. Decision trees inherently rank the importance of features based on their ability to split the data effectively. By examining the splits and node impurities within the decision tree, you can identify the most important features for differentiating between fake and legitimate news. 
+
+  Nonlinear correlations and interactions between features can be successfully captured by decision trees. The detection of fake news frequently requires intricate patterns and dependencies between multiple words or phrases. 
+
+  Decision trees can naturally handle both categorical and numerical variables without the need for explicit feature encoding. In the detection of fake news, you may come across a combination of textual, category, and numerical data.
