@@ -65,6 +65,8 @@ To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If
 ``rejoin_words(tokenized_column)`` rejoin a tokenized column of words back into a single string. 
 ``cleaning(news)`` calls all the datacleaning functions.
 
+Word cloud is created for the DataFrame. It shows the most frequent words in the given text data.
+
 ## Vectorization
 
 ``count_vectorizer.fit_transform(X)`` This line applies the fit_transform() method of the CountVectorizer class to the input X. It tokenizes and counts the words in the text data, generating a matrix of token counts.
