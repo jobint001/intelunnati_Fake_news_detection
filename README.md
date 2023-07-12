@@ -114,3 +114,9 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
 PAC is known for its computational efficiency and fast training times. It updates the model based on the disagreement between predictions and true labels, making it well-suited for large-scale dataset. PAC can handle both binary and multiclass classification problems. In fake news detection, you may encounter scenarios where you need to classify news articles into multiple categories or identify different types of fake news. PAC is designed to handle concept drift and can dynamically adjust to new patterns or characteristics in the data.
 
 The training accuracy of the decision tree has come out as 99.58 percent, which is comparable to the accuracy of the Decision tree. The training time for this model has been just 0.42 which is much faster when compared to 23 second training time of decision tree. RMSE value is also lower indicates improved accuracy and reduced prediction errors.  Therefore Passive-Aggressive classifer is taken as the final model.
+## Saving model
+
+Using ``pickle `` library is used to save the selected model. This library is also used to load the saved model from the disk for subsequent prediction.
+
+## Using the saved model for fake-news prediction from a new data
+``fake_news_det(news)`` function takes an unseen news article and predicts whether it is true or fake using the saved model. The news article is processed in the same way as in the model training section. It has been able to correctly predict the validity of the news.
