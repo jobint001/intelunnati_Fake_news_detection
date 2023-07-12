@@ -9,6 +9,7 @@ pip install --upgrade pip
 pip install ipykernel
 pip install transformers matplotlib 
 pip install pandas
+pip install wordcloud
 pip install scikit-learn-intelex
 pip install nltk
 pip install seaborn tqdm
