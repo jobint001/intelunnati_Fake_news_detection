@@ -107,6 +107,10 @@ The code ``train_test_split(tf_idf_matrix, y, random_state=21)`` is using the ``
 
   Decision trees can naturally handle both categorical and numerical variables without the need for explicit feature encoding. In the detection of fake news, you may come across a combination of textual, category, and numerical data.
   
-  The training accuracy of the decision tree has come out as 99.62 percent, which is the highest compared to all other models. AUC of ROC curve is 1 which indicates a perfect or ideal performance of the classification model. 
+  The training accuracy of the decision tree has come out as 99.62 percent. AUC of ROC curve is 1 which indicates a perfect or ideal performance of the classification model. 
 
 ### 4.Passive-Aggressive Classifier
+
+PAC is known for its computational efficiency and fast training times. It updates the model based on the disagreement between predictions and true labels, making it well-suited for large-scale dataset. PAC can handle both binary and multiclass classification problems. In fake news detection, you may encounter scenarios where you need to classify news articles into multiple categories or identify different types of fake news. PAC is designed to handle concept drift and can dynamically adjust to new patterns or characteristics in the data.
+
+The training accuracy of the decision tree has come out as 99.58 percent, which is comparable to the accuracy of the Decision tree. The training time for this model has been just 0.42 which is much faster when compared to 23 second training time of decision tree. RMSE value is also lower indicates improved accuracy and reduced prediction errors.  Therefore Passive-Aggressive classifer is taken as the final model.
