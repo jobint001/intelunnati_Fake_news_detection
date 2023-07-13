@@ -7,7 +7,7 @@ Link to download dataset - https://onlineacademiccommunity.uvic.ca/isot/2022/11/
 You can clone this repository using the below code
 
 ```
-git clone https://github.com/jobint001/Fake_news_detection
+git clone https://github.com/jobint001/intelunnati_ones_and_zeroes
 
 ```
 
