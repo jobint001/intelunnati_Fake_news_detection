@@ -22,14 +22,14 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fake_news_detection_im
 - 24 may 2023- First interaction with mentor
 - 25-31 may 2023- Finalised and submitted the work plan
 - 1-2 june 2023- Familiarisation of inteldevcloud and OneApi
-- 4 june 2023- interaction with mentor
-- 5 june 2023- stared working on data cleaning
+- 4 june 2023- Interaction with mentor
+- 5 june 2023- Stared working on data cleaning
 - 14 june 2023- Second live section with Intel
 - 15 june 2023- Started working on different models
 - 17 june 2023- Interaction with industry mentor
 - 1 july 2023- Interaction with Industry mentor
 - 4 july 2023-Finalised the project
-- 7 july 2023- created docker container
+- 7 july 2023- Created docker container
 - 14 july 2023-Final submission
 # Libraries used
 
