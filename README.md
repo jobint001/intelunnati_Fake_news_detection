@@ -1,5 +1,5 @@
 # Fake_news_detection
-This repository has different machine learning models trained to detect fake news. This project was done as part of Intel Unnati Industrial training programme.
+In this project, we will leverage machine learning techniques to build a model capable of distinguishing between real and fake news articles. The model will analyze various textual features of the news articles and learn patterns that differentiate genuine news from deceptive or misleading content. This project was done as part of Intel Unnati Industrial training programme.
 
 Link to download dataset - https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
 
