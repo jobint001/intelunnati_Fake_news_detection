@@ -52,7 +52,7 @@ The data is read as csv file using `` panda.read_csv() ``
 
 ## Data cleaning 
 
-Unnecessary colum in the data is removed as they do not affect the performance of the model. Fake news is labeled as 0 and True news is labeled as 1. Tiltle, text, label columns are used from the initial dataset.
+Unnecessary column in the data is removed as they do not affect the performance of the model. Fake news is labeled as 0 and True news is labeled as 1. Tiltle, text, label columns are used from the initial dataset.
 
 To check for missing values (NaN) ``  Check_forNAN(data) `` function is used. If any missing values are found `` data.dropna()`` removes those rows.
 
