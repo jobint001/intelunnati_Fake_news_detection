@@ -18,7 +18,6 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fake_news_detection_im
 
 
 ```
-we started our project on 24th of may 2023. The live section on 31st gave us an insight on what we are supposed to do. First step was data collection, which we took the dataset referenced from the intel.
 
 # Libraries used
 
