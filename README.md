@@ -18,7 +18,11 @@ docker pull ghcr.io/jobint001/intelunnati_ones_and_zeroes/fake_news_detection_im
 
 
 ```
-
+# Project Timeline
+-24 may 2023- First interaction with mentor
+-31 may 2023- Finalised and submitted the work plan
+-1 june 2023- Familiarisation of inteldevcloud and OneApi
+-
 # Libraries used
 
 * ``pandas``: Used for data manipulation and analysis.
